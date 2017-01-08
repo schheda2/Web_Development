@@ -1,0 +1,110 @@
+
+<html>
+    <head>
+
+
+<title> Jquery!!!!</title>
+        <style type="text/css">
+         #circle{
+                background-color: aqua;
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                margin-bottom: 10px;
+                display: table-cell;
+                text-align: center;
+                vertical-align: middle;
+                color: blue;
+               
+        
+            }
+            .square{
+                background-color: red;
+                width: 100px;
+                height: 100px;
+                 margin-bottom: 10px;
+                
+        
+            }
+            
+        
+        </style>
+             
+        
+        <script src="jquery-3.1.1.min.js"></script>
+        
+
+    </head>
+    
+    
+    <body>
+        <div id="textclick">HERE THE TEXT WILL CHANGE</div>
+        <iframe scr ="https://www.ecowebhosting.co.uk/"></iframe>
+        
+        <div id = "circle">Center this text!</div> 
+        
+        <div class = "square"></div> 
+        
+        <div class = "square"></div> 
+        
+        <p id="fadeouttext">this text should   fade out on button press!! </p>
+        <button id ="fadeoutbutton">Fade out!!!</button>
+        <button id="oneword">toggle</button>
+        
+        
+        
+        <script type="text/javascript">
+        if(typeof jQuery == "undefined"){
+            alert ("jQuery is not installed correctly");
+        }
+        else
+        {
+            ("jQuery is  installed correctly");
+//            $(this).click (function(){
+//                 $("#circle").css("background-color" , "red")
+//                 //css+ jquery
+//                $("#textclick").html ($("body").css("width"));
+//                   
+//                $("iframe").attr("src","https://www.ecowebhosting.co.uk/");
+//                
+//            });
+//            $(".square").hover(function(){
+//                alert("square was clicked");
+//                
+//            });
+            $("#fadeoutbutton").click (function(){
+                $("p").fadeOut();
+                $("#circle").animate({
+                    width:"200px",
+                    height: "200px" ,
+                    marginTop: "200px",
+                    marginBottom:"200px"
+                },2000,function(){
+                    $("#circle").css("background-color","red")
+                });
+               
+                
+            });
+            var i=0;
+            $("#oneword").click(function(){
+            if(i==0){
+                
+            $("#fadeouttext").fadeIn("slow");  
+                i=1;
+            }
+                else{
+                    $("#fadeouttext").fadeOut("slow");  
+                i=0;
+                }
+                
+            });
+            
+            
+        }
+        
+        </script>
+    
+    
+    
+    </body>
+</html>
